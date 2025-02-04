@@ -1,0 +1,89 @@
+body{
+    background-color: rgb(43, 39, 30);
+}
+.checkbox{
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50% و -50%);   
+}
+input[type="checkbox"]{
+appearance: none;
+position: relative;
+width: 130px;
+height: 55px;
+border-radius: 25px;
+background: rgb(194, 193, 193);
+
+box-shadow: 0 0 5px black;
+transition: 0.5s ease;
+}
+
+input:checked[type="checkbox"]{
+    background: blue;
+}
+
+input[type="checkbox"]::before{
+    content: '';
+    width: 50px;
+    height: 54px;
+    border-radius: 25px;
+    background: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s ease;
+}
+
+input:checked[type="checkbox"]::before{
+left: 79px;
+
+}
+
+
+button{
+    position: relative;
+    width: 200px;
+    height: 60px;
+    background: black;
+    color: white;
+    border-radius: 50px;
+    left: 140px;
+    outline: none;
+    margin: -40;
+    font-size: 23px;
+    font-weight: bold;
+    border: none;
+}
+
+button:hover{
+    background: linear-gradient(50deg, skyblue,orange,red ,orange,skyblue);
+background-size: 500%;
+animation: glow 8s linear infinite;
+}
+
+button:before{
+    content: '';
+    position: absolute;
+    top: -5px;
+    bottom: -5px;
+    right: -5px;
+    left: -5px;
+    background: linear-gradient(50deg, skyblue,orange,red);
+filter: blur(20px);
+opacity: 0;
+}
+
+button:hover:before{
+    opacity: 1;
+    z-index: -1;
+}
+
+@keyframes glow{
+    from{
+background-position: 0%;
+    }
+    to{
+        background-position: 500%;
+    }
+}
