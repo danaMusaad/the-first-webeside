@@ -1,89 +1,270 @@
-body{
-    background-color: rgb(43, 39, 30);
-}
-.checkbox{
-    position: absolute;
-    top: 50%;
-    left: 40%;
-    transform: translate(-50% و -50%);   
-}
-input[type="checkbox"]{
-appearance: none;
-position: relative;
-width: 130px;
-height: 55px;
-border-radius: 25px;
-background: rgb(194, 193, 193);
-
-box-shadow: 0 0 5px black;
-transition: 0.5s ease;
+* {
+    margin: 0;
+    padding: 0;
 }
 
-input:checked[type="checkbox"]{
-    background: blue;
+.main {
+    background: linear-gradient(135deg, 
+    rgba(0, 255, 255, 0.8) 0%, rgba(255, 0, 255, 0.7) 25%, rgba(0, 0, 255, 0.6) 50%, rgba(255, 165, 0, 0.6) 75%, rgba(128, 0, 128, 0.7) 100%);
+    background-size: 400% 400%;
+    height: 100vh;
+    margin: 0;
 }
 
-input[type="checkbox"]::before{
-    content: '';
-    width: 50px;
-    height: 54px;
-    border-radius: 25px;
-    background: white;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: 0.5s ease;
+.navbar {
+    width: 1200px;
+    height: 75px;
+    margin: auto;
 }
 
-input:checked[type="checkbox"]::before{
-left: 79px;
-
-}
-
-
-button{
-    position: relative;
+.icon {
     width: 200px;
-    height: 60px;
-    background: black;
-    color: white;
-    border-radius: 50px;
-    left: 140px;
-    outline: none;
-    margin: -40;
-    font-size: 23px;
+    float: left;
+    height: 70px;
+}
+
+.logo {
+    background: linear-gradient(to right, #ff007f, #00bfff);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 35px;
+    font-family: Arial;
+    padding-left: 20px;
+    float: left;
+    padding-top: 10px;
+}
+
+.menu {
+    width: 400px;
+    float: left;
+    height: 70px;
+}
+
+ul {
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li {
+    list-style: none;
+    margin-left: 62px;
+    margin-top: 24px;
+    font-size: 14px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: purple;
+    font-family: Arial;
     font-weight: bold;
+    transition: 0.4s ease-in-out;
+}
+
+ul li a:hover {
+    color: silver;
+}
+
+.search {
+    width: 330px;
+    float: left;
+    margin-left: 270px;
+}
+
+.srch {
+    font-family: 'Times New Roman';
+    width: 200px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid black;
+    margin-top: 13px;
+    color: black;
+    border-right: none;
+    font-size: 16px;
+    float: left;
+    padding: 10px;
+    border-bottom: 5px;
+    border-top-left-radius: 5px;
+}
+
+
+.btn {
+    width: 100px;
+    height: 40px;
+    background: purple;
+    margin-top: 13px;
+    border: 2px solid purple;
+    color: white;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease, outline 0.3s ease;
+    outline: none;
+}
+
+.btn:hover {
+    background-color: silver;
+    color: black;
+    border-color: silver;
+}
+
+.btn:focus {
+    outline: 2px solid purple;
+    outline-offset: 2px;
+    background-color: silver;
+    border-color: silver;
+    color: black;
+}
+
+
+
+.srch:focus {
+    outline: none;
+}
+
+.content {
+    width: 1200px;
+    height: auto;
+    margin: auto;
+    position: relative;
+    color: rgb(146, 90, 198);
+}
+
+.content .par {
+    padding-left: 20px;
+    padding-bottom: 25px;
+    font-family: Arial;
+    letter-spacing: 1.2px;
+    line-height: 30px;
+    transform: translateY(80px);
+}
+
+.content h1 {
+    font-family: 'Times New Roman';
+    font-size: 50px;
+    padding-left: 20px;
+    letter-spacing: 2px;
+    transform: translateY(80px);
+}
+
+.content .cn {
+    display: inline-block;
+    width: 160px;
+    height: 40px;
+    background: purple;
     border: none;
+    color: white;
+    transform: translateY(60px);
+    margin-bottom: 10px;
+    margin-left: 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    transition: 0.3s ease;
 }
 
-button:hover{
-    background: linear-gradient(50deg, skyblue,orange,red ,orange,skyblue);
-background-size: 500%;
-animation: glow 8s linear infinite;
+.content .cn:hover {
+    background-color: silver;
+    color: black;
 }
 
-button:before{
-    content: '';
-    position: absolute;
-    top: -5px;
-    bottom: -5px;
-    right: -5px;
-    left: -5px;
-    background: linear-gradient(50deg, skyblue,orange,red);
-filter: blur(20px);
-opacity: 0;
+.content span{
+
+    color: purple;
+    font-size: 60px;
 }
 
-button:hover:before{
-    opacity: 1;
-    z-index: -1;
+.form{
+width: 250px;
+height: 340px;
+background: linear-gradient(to top,rgba(127, 52, 127, 0.7) 25%, rgba(119, 119, 207, 0.6) 50%);
+position: absolute;
+top: 50px;
+left: 820px;
+border-radius: 10px;
+padding: 20px;
 }
 
-@keyframes glow{
-    from{
-background-position: 0%;
-    }
-    to{
-        background-position: 500%;
-    }
+.form h2{
+width: 220px;
+font-family: sans-serif;
+text-align: center;
+color: purple;
+font-size: 22px;
+padding-top: 15px;
 }
+
+.form input{
+    width: 240px;
+    height: 30px;
+    background: transparent;
+    border-bottom: 1px solid white;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    font-family: sans-serif;
+}
+
+.form input:focus{
+    outline: none;
+}
+
+::placeholder{
+    color: rgb(243, 240, 240);
+    font-family: Arial;
+    font-size: 13px;
+}
+
+.btnn{
+    width: 240px;
+    height: 40px;
+    background: purple;
+    border: none;
+    margin-top: 30px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    transition: 0.4s ease;
+}
+
+.btnn:hover{
+    background: silver;
+    color: black;
+}
+
+.btnn a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+
+.form .link a:hover{
+    color: silver;
+    
+}
+
+.form .link {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    padding-top: 26px;
+    text-align: center;
+    color: rgb(226, 150, 226);
+    margin-bottom: 20px; 
+}
+
+.form .link a {
+    color: rgb(201, 188, 201);
+    display: inline-block; 
+    margin-top: 10px; 
+}
+
